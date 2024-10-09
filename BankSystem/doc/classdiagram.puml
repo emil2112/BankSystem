@@ -1,0 +1,28 @@
+@startuml
+class Main{
+ + static void main(String[] args)
+}
+
+class Bank{
+ - String name
+ - ArrayList<Customer> customers
+ + Bank(String)
+ + void addCustomer(Customer)
+ + String toString()
+}
+
+class Customer{
+ - String name
+ - int balance
+ + Customer(String, int)
+ + void setBalance(int)
+ + String toString()
+
+}
+
+
+
+Main *-- Bank
+Bank *-- Customer
+
+@enduml
